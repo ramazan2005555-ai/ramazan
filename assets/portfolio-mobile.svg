@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f093fb"/><stop offset="100%" stop-color="#f5576c"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg2)"/>
+  <!-- Phone body -->
+  <rect x="150" y="15" width="100" height="210" rx="14" fill="#1a1a2e" stroke="#333" stroke-width="1.5"/>
+  <rect x="155" y="30" width="90" height="180" rx="4" fill="#0f0f1a"/>
+  <!-- Status bar -->
+  <rect x="155" y="30" width="90" height="14" fill="#12122a"/>
+  <rect x="162" y="35" width="16" height="4" rx="1" fill="#555"/>
+  <rect x="222" y="35" width="12" height="4" rx="1" fill="#555"/>
+  <!-- App header -->
+  <rect x="155" y="44" width="90" height="24" fill="#f093fb" opacity="0.15"/>
+  <rect x="162" y="50" width="50" height="6" rx="2" fill="#f093fb" opacity="0.8"/>
+  <circle cx="232" cy="53" r="6" fill="#f093fb" opacity="0.3"/>
+  <!-- Stats cards -->
+  <rect x="160" y="74" width="38" height="36" rx="6" fill="#1e1e3a"/>
+  <rect x="202" y="74" width="38" height="36" rx="6" fill="#1e1e3a"/>
+  <rect x="165" y="80" width="20" height="5" rx="1" fill="#f5576c" opacity="0.7"/>
+  <rect x="165" y="90" width="28" height="8" rx="1" fill="#fff" opacity="0.8"/>
+  <rect x="207" y="80" width="20" height="5" rx="1" fill="#f093fb" opacity="0.7"/>
+  <rect x="207" y="90" width="28" height="8" rx="1" fill="#fff" opacity="0.8"/>
+  <!-- Chart -->
+  <rect x="160" y="116" width="80" height="50" rx="6" fill="#1e1e3a"/>
+  <polyline points="168,155 180,140 192,148 204,130 216,135 228,125" fill="none" stroke="#f093fb" stroke-width="2" opacity="0.8"/>
+  <circle cx="168" cy="155" r="2.5" fill="#f093fb"/><circle cx="228" cy="125" r="2.5" fill="#f5576c"/>
+  <!-- Workout list -->
+  <rect x="160" y="172" width="80" height="10" rx="3" fill="#1e1e3a"/>
+  <rect x="164" y="175" width="30" height="4" rx="1" fill="#f5576c" opacity="0.5"/>
+  <rect x="160" y="186" width="80" height="10" rx="3" fill="#1e1e3a"/>
+  <rect x="164" y="189" width="24" height="4" rx="1" fill="#f093fb" opacity="0.5"/>
+  <!-- Bottom nav -->
+  <rect x="155" y="200" width="90" height="10" fill="#12122a"/>
+  <circle cx="175" cy="205" r="3" fill="#f093fb"/><circle cx="195" cy="205" r="3" fill="#444"/>
+  <circle cx="215" cy="205" r="3" fill="#444"/><circle cx="235" cy="205" r="3" fill="#444"/>
+  <!-- Floating elements -->
+  <circle cx="80" cy="60" r="20" fill="#fff" opacity="0.08"/>
+  <circle cx="320" cy="180" r="30" fill="#fff" opacity="0.06"/>
+  <rect x="50" y="140" width="40" height="40" rx="8" fill="#fff" opacity="0.05" transform="rotate(15 70 160)"/>
+</svg>

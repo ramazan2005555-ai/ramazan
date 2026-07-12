@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#43e97b"/><stop offset="100%" stop-color="#38f9d7"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg4)"/>
+  <!-- Monitor -->
+  <rect x="50" y="20" width="300" height="175" rx="8" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <rect x="56" y="26" width="288" height="158" rx="4" fill="#0f0f1a"/>
+  <!-- Title bar -->
+  <rect x="56" y="26" width="288" height="18" fill="#12122a"/>
+  <circle cx="68" cy="35" r="3.5" fill="#ff5f57"/><circle cx="80" cy="35" r="3.5" fill="#febc2e"/><circle cx="92" cy="35" r="3.5" fill="#28c840"/>
+  <rect x="150" y="32" width="50" height="6" rx="2" fill="#333"/>
+  <!-- Sidebar -->
+  <rect x="56" y="44" width="50" height="140" fill="#12122a"/>
+  <rect x="62" y="52" width="30" height="6" rx="2" fill="#43e97b" opacity="0.5"/>
+  <rect x="62" y="64" width="24" height="4" rx="1" fill="#333"/>
+  <rect x="62" y="74" width="28" height="4" rx="1" fill="#333"/>
+  <rect x="62" y="84" width="20" height="4" rx="1" fill="#333"/>
+  <rect x="62" y="94" width="26" height="4" rx="1" fill="#333"/>
+  <rect x="62" y="110" width="30" height="6" rx="2" fill="#43e97b" opacity="0.3"/>
+  <!-- Main content - stat cards -->
+  <rect x="114" y="50" width="72" height="36" rx="6" fill="#1e1e3a"/>
+  <rect x="120" y="56" width="24" height="4" rx="1" fill="#43e97b" opacity="0.6"/>
+  <rect x="120" y="64" width="36" height="8" rx="1" fill="#fff" opacity="0.7"/>
+  <rect x="120" y="76" width="18" height="4" rx="1" fill="#28c840" opacity="0.4"/>
+  
+  <rect x="194" y="50" width="72" height="36" rx="6" fill="#1e1e3a"/>
+  <rect x="200" y="56" width="24" height="4" rx="1" fill="#38f9d7" opacity="0.6"/>
+  <rect x="200" y="64" width="36" height="8" rx="1" fill="#fff" opacity="0.7"/>
+  <rect x="200" y="76" width="18" height="4" rx="1" fill="#43e97b" opacity="0.4"/>
+  
+  <rect x="274" y="50" width="60" height="36" rx="6" fill="#1e1e3a"/>
+  <rect x="280" y="56" width="20" height="4" rx="1" fill="#43e97b" opacity="0.6"/>
+  <rect x="280" y="64" width="30" height="8" rx="1" fill="#fff" opacity="0.7"/>
+  <!-- Table -->
+  <rect x="114" y="94" width="220" height="90" rx="6" fill="#1e1e3a"/>
+  <rect x="114" y="94" width="220" height="14" rx="6" fill="#16162a"/>
+  <rect x="122" y="98" width="40" height="4" rx="1" fill="#555"/>
+  <rect x="174" y="98" width="30" height="4" rx="1" fill="#555"/>
+  <rect x="216" y="98" width="24" height="4" rx="1" fill="#555"/>
+  <rect x="252" y="98" width="30" height="4" rx="1" fill="#555"/>
+  <rect x="294" y="98" width="20" height="4" rx="1" fill="#555"/>
+  <!-- Table rows -->
+  <rect x="122" y="114" width="40" height="4" rx="1" fill="#aaa"/>
+  <rect x="174" y="114" width="30" height="4" rx="1" fill="#888"/>
+  <rect x="216" y="114" width="24" height="4" rx="1" fill="#888"/>
+  <rect x="252" y="114" width="30" height="4" rx="1" fill="#43e97b" opacity="0.5"/>
+  <rect x="122" y="126" width="40" height="4" rx="1" fill="#aaa"/>
+  <rect x="174" y="126" width="30" height="4" rx="1" fill="#888"/>
+  <rect x="216" y="126" width="24" height="4" rx="1" fill="#888"/>
+  <rect x="252" y="126" width="30" height="4" rx="1" fill="#38f9d7" opacity="0.5"/>
+  <rect x="122" y="138" width="40" height="4" rx="1" fill="#aaa"/>
+  <rect x="174" y="138" width="30" height="4" rx="1" fill="#888"/>
+  <rect x="216" y="138" width="24" height="4" rx="1" fill="#888"/>
+  <rect x="252" y="138" width="30" height="4" rx="1" fill="#43e97b" opacity="0.5"/>
+  <rect x="122" y="150" width="40" height="4" rx="1" fill="#aaa"/>
+  <rect x="174" y="150" width="30" height="4" rx="1" fill="#888"/>
+  <rect x="216" y="150" width="24" height="4" rx="1" fill="#888"/>
+  <rect x="252" y="150" width="30" height="4" rx="1" fill="#38f9d7" opacity="0.5"/>
+  <!-- Monitor stand -->
+  <path d="M30 195 L370 195 L380 208 L20 208 Z" fill="#1a1a2e"/>
+  <rect x="170" y="193" width="60" height="4" rx="2" fill="#333"/>
+</svg>

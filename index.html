@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>DevStudio — Разработка сайтов, приложений и ботов</title>
+    <meta name="description" content="Профессиональная разработка сайтов, мобильных приложений, Telegram-ботов и веб-сервисов.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style-mobile.css">
+    <link rel="stylesheet" href="css/style-desktop.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="noise-overlay"></div>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">
+            <span class="loader-icon">&#60;/&#62;</span>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">&#60;/&#62;</span>
+                <span class="logo-text">DevStudio</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services" class="magnetic">Услуги</a></li>
+                <li><a href="#portfolio" class="magnetic">Портфолио</a></li>
+                <li><a href="#about" class="magnetic">Обо мне</a></li>
+                <li><a href="#reviews" class="magnetic">Отзывы</a></li>
+                <li><a href="#contact" class="nav-cta magnetic">Связаться</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-content">
+            <ul class="mobile-nav-links">
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contact">Связаться</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <canvas id="particles"></canvas>
+            <canvas id="starfield"></canvas>
+            <div class="hex-grid"></div>
+            <div class="hero-grid"></div>
+            <div class="morph-shape" style="width:300px;height:300px;top:10%;right:5%"></div>
+            <div class="morph-shape" style="width:200px;height:200px;bottom:15%;left:5%;animation-delay:-5s"></div>
+            <div class="floating-decor" style="--fd-size:6px;--fd-color:rgba(124,58,237,0.4);--fd-duration:7s;--fd-delay:0s;--fd-x1:15px;--fd-y1:-20px;--fd-x2:-12px;--fd-y2:18px;--fd-x3:18px;--fd-y3:-10px;--fd-opacity:0.5;top:15%;left:12%"></div>
+            <div class="floating-decor" style="--fd-size:4px;--fd-color:rgba(99,102,241,0.35);--fd-duration:9s;--fd-delay:1s;--fd-x1:-18px;--fd-y1:12px;--fd-x2:10px;--fd-y2:-15px;--fd-x3:-8px;--fd-y3:20px;--fd-opacity:0.4;top:25%;right:18%"></div>
+            <div class="floating-decor" style="--fd-size:8px;--fd-color:rgba(168,85,247,0.25);--fd-duration:11s;--fd-delay:2s;--fd-x1:20px;--fd-y1:10px;--fd-x2:-15px;--fd-y2:-18px;--fd-x3:12px;--fd-y3:15px;--fd-opacity:0.35;bottom:25%;left:8%"></div>
+            <div class="floating-decor" style="--fd-size:5px;--fd-color:rgba(124,58,237,0.3);--fd-duration:8s;--fd-delay:3s;--fd-x1:-10px;--fd-y1:-18px;--fd-x2:14px;--fd-y2:10px;--fd-x3:-12px;--fd-y3:-8px;--fd-opacity:0.3;bottom:30%;right:10%"></div>
+            <div class="floating-decor" style="--fd-size:3px;--fd-color:rgba(99,102,241,0.4);--fd-duration:6s;--fd-delay:0.5s;--fd-x1:8px;--fd-y1:-12px;--fd-x2:-6px;--fd-y2:14px;--fd-x3:10px;--fd-y3:-6px;--fd-opacity:0.45;top:60%;left:25%"></div>
+            <div class="floating-decor" style="--fd-size:7px;--fd-color:rgba(168,85,247,0.2);--fd-duration:10s;--fd-delay:4s;--fd-x1:-14px;--fd-y1:8px;--fd-x2:12px;--fd-y2:-10px;--fd-x3:-10px;--fd-y3:12px;--fd-opacity:0.3;--fd-blur:1px;top:70%;right:25%"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge stagger-item">Доступен для новых проектов</div>
+            <h1 class="hero-title stagger-item">
+                Создаю <span class="gradient-text"><span id="typewriter"></span><span class="typewriter-cursor">|</span></span>, которые работают
+            </h1>
+            <p class="hero-subtitle stagger-item">
+                Разработка сайтов, мобильных приложений, Telegram-ботов и веб-сервисов.
+                Превращаю идеи в готовые продукты с нуля.
+            </p>
+            <div class="hero-buttons stagger-item">
+                <a href="#contact" class="btn btn-primary magnetic-btn">
+                    <span>Обсудить проект</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="#portfolio" class="btn btn-secondary magnetic-btn">
+                    <span>Смотреть портфолио</span>
+                </a>
+            </div>
+            <div class="hero-stats stagger-item">
+                <div class="stat">
+                    <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Проектов</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="30">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Клиентов</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Лет опыта</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>HTML5 / CSS3</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>JavaScript</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>React</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Next.js</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>React Native</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>Node.js</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Telegram Bot API</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>PostgreSQL</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Docker</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Figma</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>TypeScript</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>Python</span>
+            <!-- duplicate for seamless loop -->
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>HTML5 / CSS3</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>JavaScript</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>React</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Next.js</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>React Native</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>Node.js</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Telegram Bot API</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>PostgreSQL</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Docker</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Figma</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>TypeScript</span>
+            <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>Python</span>
+        </div>
+    </div>
+
+    <section class="services" id="services">
+        <div class="font-reader"><span class="font-reader-text">Services</span></div>
+        <div class="gradient-mesh">
+            <div class="gradient-mesh-blob"></div>
+            <div class="gradient-mesh-blob"></div>
+            <div class="gradient-mesh-blob"></div>
+        </div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Услуги</span>
+                <h2 class="section-title split-text">Что я могу сделать <span class="gradient-text">для вас</span></h2>
+                <p class="section-subtitle">Полный цикл разработки — от идеи до запуска</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card tilt-card animated-border glass-card noise-hover animate-on-scroll">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Разработка сайтов</h3>
+                    <p class="service-desc">Лендинги, корпоративные сайты, интернет-магазины. Адаптивный дизайн, SEO, быстрая загрузка.</p>
+                    <div class="service-tags">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Next.js</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="service-card tilt-card animated-border glass-card noise-hover animate-on-scroll">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Мобильные приложения</h3>
+                    <p class="service-desc">Нативные и кроссплатформенные приложения для iOS и Android. Современный UI, анимации.</p>
+                    <div class="service-tags">
+                        <span>React Native</span>
+                        <span>Expo</span>
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="service-card tilt-card animated-border glass-card noise-hover animate-on-scroll">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Telegram-боты</h3>
+                    <p class="service-desc">Боты для бизнеса, автоматизации, оплаты, уведомлений. Интеграция с CRM и API.</p>
+                    <div class="service-tags">
+                        <span>Python</span>
+                        <span>Node.js</span>
+                        <span>aiogram</span>
+                        <span>Telegraf</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="service-card tilt-card animated-border glass-card noise-hover animate-on-scroll">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.1 9.3"/><path d="m16.24 7.76 2.12-2.12"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Веб-приложения</h3>
+                    <p class="service-desc">SaaS-платформы, панели управления, CRM, ERP. Масштируемая архитектура.</p>
+                    <div class="service-tags">
+                        <span>React</span>
+                        <span>Vue.js</span>
+                        <span>NestJS</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="service-card tilt-card animated-border glass-card noise-hover animate-on-scroll">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17.5 10.5a2.5 2.5 0 1 0 0-5"/><path d="M8.5 14a2.5 2.5 0 1 0 0-5"/><circle cx="13.5" cy="17.5" r="2.5"/><path d="M3 21V5a2 2 0 0 1 2-2h6"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="service-title">UI/UX Дизайн</h3>
+                    <p class="service-desc">Дизайн интерфейсов, прототипирование, дизайн-системы. Figma, анимации.</p>
+                    <div class="service-tags">
+                        <span>Figma</span>
+                        <span>Prototyping</span>
+                        <span>Design System</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="service-card tilt-card animated-border glass-card noise-hover animate-on-scroll">
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+                        </div>
+                    </div>
+                    <h3 class="service-title">Backend / API</h3>
+                    <p class="service-desc">Серверная архитектура, REST и GraphQL API, микросервисы. Надёжность и безопасность.</p>
+                    <div class="service-tags">
+                        <span>NestJS</span>
+                        <span>Node.js</span>
+                        <span>PostgreSQL</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="font-reader"><span class="font-reader-text">Works</span></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Портфолио</span>
+                <h2 class="section-title split-text">Избранные <span class="gradient-text">проекты</span></h2>
+                <p class="section-subtitle">Каждый проект — уникальное решение под задачи клиента</p>
+            </div>
+            <div class="portfolio-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="web">Сайты</button>
+                <button class="filter-btn" data-filter="mobile">Мобильные</button>
+                <button class="filter-btn" data-filter="bot">Боты</button>
+                <button class="filter-btn" data-filter="app">Веб-приложения</button>
+            </div>
+            <div class="portfolio-scroll-wrap">
+                <div class="portfolio-grid">
+                <div class="portfolio-card tilt-card animate-on-scroll" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio-website.svg" alt="Корпоративный сайт" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-type">Лендинг</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Корпоративный сайт IT-компании</h3>
+                        <p>Многостраничный сайт с CMS, блогом и интеграцией с CRM</p>
+                    </div>
+                </div>
+                <div class="portfolio-card tilt-card animate-on-scroll" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio-mobile.svg" alt="Фитнес-трекер" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-type">Мобильное приложение</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Фитнес-трекер</h3>
+                        <p>React Native приложение с тренировками, питанием и статистикой</p>
+                    </div>
+                </div>
+                <div class="portfolio-card tilt-card animate-on-scroll" data-category="bot">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio-bot.svg" alt="Telegram-бот" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-type">Telegram-бот</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Бот для интернет-магазина</h3>
+                        <p>Каталог, корзина, онлайн-оплата, уведомления о статусе заказа</p>
+                    </div>
+                </div>
+                <div class="portfolio-card tilt-card animate-on-scroll" data-category="app">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio-crm.svg" alt="CRM-система" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-type">Веб-приложение</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>CRM-система</h3>
+                        <p>Панель управления клиентами, сделками и аналитикой продаж</p>
+                    </div>
+                </div>
+                <div class="portfolio-card tilt-card animate-on-scroll" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio-store.svg" alt="Интернет-магазин" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-type">Интернет-магазин</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Магазин одежды</h3>
+                        <p>E-commerce с каталогом, корзиной, оплатой и личным кабинетом</p>
+                    </div>
+                </div>
+                <div class="portfolio-card tilt-card animate-on-scroll" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="assets/portfolio-delivery.svg" alt="Доставка еды" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-type">Мобильное приложение</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Доставка еды</h3>
+                        <p>Полноценный аналог Glovo с отслеживанием курьера в реальном времени</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="font-reader"><span class="font-reader-text">About</span></div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content animate-on-scroll">
+                    <span class="section-tag">Обо мне</span>
+                    <h2 class="section-title split-text">Превращаю идеи в <span class="gradient-text">рабочие продукты</span></h2>
+                    <p class="about-text">
+                        Full-stack разработчик с опытом создания веб-сайтов, мобильных приложений и Telegram-ботов.
+                        Работаю от прототипа до запуска, контролируя каждый этап.
+                    </p>
+                    <p class="about-text">
+                        Использую современные технологии и проверенные подходы. Каждый проект — это сочетание
+                        красивого дизайна, чистого кода и надёжной архитектуры.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <span>Индивидуальный подход к каждому проекту</span>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <span>Прозрачная коммуникация и дедлайны</span>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <span>Поддержка после запуска проекта</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-tech animate-on-scroll">
+                    <h3 class="tech-title">Технологии</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <span class="tech-name">JavaScript / TypeScript</span>
+                            <div class="tech-bar"><div class="tech-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">React / Next.js</span>
+                            <div class="tech-bar"><div class="tech-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">React Native / Expo</span>
+                            <div class="tech-bar"><div class="tech-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Node.js / NestJS</span>
+                            <div class="tech-bar"><div class="tech-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Python</span>
+                            <div class="tech-bar"><div class="tech-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">PostgreSQL / MongoDB</span>
+                            <div class="tech-bar"><div class="tech-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Docker / CI/CD</span>
+                            <div class="tech-bar"><div class="tech-fill" data-width="75"></div></div>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-name">Figma / UI-UX</span>
+                            <div class="tech-bar"><div class="tech-fill" data-width="80"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="tech-marquee">
+        <div class="tech-marquee-track">
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <!-- duplicate for seamless -->
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <div class="tech-marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        </div>
+    </div>
+
+    <section class="reviews" id="reviews">
+        <div class="font-reader"><span class="font-reader-text">Reviews</span></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Отзывы</span>
+                <h2 class="section-title split-text">Что говорят <span class="gradient-text">клиенты</span></h2>
+            </div>
+            <div class="reviews-scroll-wrap">
+                <div class="reviews-grid">
+                    <div class="review-card tilt-card animated-border animate-on-scroll">
+                        <div class="review-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="review-text">"Заказал интернет-магазин. Результат превзошёл ожидания — быстрая загрузка, красивый дизайн, удобное управление товарами. Рекомендую!"</p>
+                        <div class="review-author">
+                            <div class="review-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">А</div>
+                            <div>
+                                <span class="review-name">Алексей К.</span>
+                                <span class="review-role">Владелец бизнеса</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card tilt-card animated-border animate-on-scroll">
+                        <div class="review-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="review-text">"Telegram-бот для приёма заказов — лучшее решение для нашего кафе. Клиенты довольны, а мы экономим время на обработке заявок."</p>
+                        <div class="review-author">
+                            <div class="review-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">М</div>
+                            <div>
+                                <span class="review-name">Мария С.</span>
+                                <span class="review-role">Владелец кафе</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card tilt-card animated-border animate-on-scroll">
+                        <div class="review-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="review-text">"Мобильное приложение для фитнеса — функциональное и красивое. Прогресс-трекер, уведомления, синхронизация. Очень доволен!"</p>
+                        <div class="review-author">
+                            <div class="review-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">Д</div>
+                            <div>
+                                <span class="review-name">Дмитрий В.</span>
+                                <span class="review-role">Фитнес-тренер</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel-section" id="carousel">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Отзывы 2</span>
+                <h2 class="section-title split-text">Что говорят <span class="gradient-rotate">клиенты</span></h2>
+                <p class="section-subtitle">Автоматический carousel отзывов</p>
+            </div>
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <div class="review-card glass-card noise-hover animate-on-scroll">
+                            <div class="review-stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <p class="review-text">"Отличный специалист! Сделал мобильное приложение в срок и с отличным качеством."</p>
+                            <div class="review-author">
+                                <div class="review-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);">Е</div>
+                                <div><span class="review-name">Елена П.</span><span class="review-role">Предприниматель</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="review-card glass-card noise-hover animate-on-scroll">
+                            <div class="review-stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <p class="review-text">"CRM-система работает безупречно. Команда довольна, клиенты довольны. Рекомендую!"</p>
+                            <div class="review-author">
+                                <div class="review-avatar" style="background:linear-gradient(135deg,#43e97b,#38f9d7);">О</div>
+                                <div><span class="review-name">Олег М.</span><span class="review-role">Директор агентства</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="review-card glass-card noise-hover animate-on-scroll">
+                            <div class="review-stars">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <p class="review-text">"Бот для приёма заказов — лучшее вложение. Автоматизация сэкономила кучу времени."</p>
+                            <div class="review-author">
+                                <div class="review-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);">И</div>
+                                <div><span class="review-name">Ирина К.</span><span class="review-role">Владелец ресторана</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <div class="carousel-arrows">
+                <button class="carousel-arrow" id="carouselPrev" aria-label="Назад">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="carousel-arrow" id="carouselNext" aria-label="Вперёд">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="process" id="process">
+        <div class="font-reader"><span class="font-reader-text">Process</span></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Процесс</span>
+                <h2 class="section-title split-text">Как работает <span class="gradient-text">сотрудничество</span></h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">01</div>
+                    <h3>Обсуждение</h3>
+                    <p>Разбираюсь в задаче, изучаю требования, предлагаю лучшее решение</p>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">02</div>
+                    <h3>Дизайн</h3>
+                    <p>Создаю прототип и дизайн-макет, согласовываем каждый экран</p>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">03</div>
+                    <h3>Разработка</h3>
+                    <p>Пишу чистый код, регулярно показываю промежуточные результаты</p>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">04</div>
+                    <h3>Запуск</h3>
+                    <p>Тестирую, оптимизирую, запускаю и обеспечиваю поддержку</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="font-reader"><span class="font-reader-text">Story</span></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">История</span>
+                <h2 class="section-title split-text">Мой путь в <span class="gradient-text">разработке</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021</div>
+                    <h3>Начало карьеры</h3>
+                    <p>Первые проекты на фрилансе — лендинги и корпоративные сайты для малого бизнеса</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022</div>
+                    <h3>Мобильная разработка</h3>
+                    <p>Освоил React Native, запустил первые приложения для iOS и Android</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <h3>Telegram-боты и Backend</h3>
+                    <p>Начал создавать ботов для бизнеса, освоил NestJS и PostgreSQL</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <h3>Полный цикл</h3>
+                    <p>Веб-приложения, SaaS-платформы, CRM-системы — от идеи до запуска</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 — н.в.</div>
+                    <h3>DevStudio</h3>
+                    <p>Собственная студия разработки. 50+ проектов, 30+ довольных клиентов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="font-reader"><span class="font-reader-text">FAQ</span></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Вопросы</span>
+                <h2 class="section-title split-text">Часто задаваемые <span class="gradient-text">вопросы</span></h2>
+                <p class="section-subtitle">Ответы на самые популярные вопросы о работе</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Сколько стоит разработка сайта?</span>
+                        <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer"><p>Стоимость зависит от сложности проекта. Лендинг — от 30 000 руб., интернет-магазин — от 80 000 руб., веб-приложение — от 120 000 руб. Точную цену назову после обсуждения задачи.</p></div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Какие сроки разработки?</span>
+                        <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer"><p>Лендинг — 1-2 недели. Сайт — 2-4 недели. Мобильное приложение — 1-3 месяца. Telegram-бот — 1-2 недели. Сроки согласовываем до начала работ.</p></div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Как происходит оплата?</span>
+                        <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer"><p>Предоплата 50% при начале проекта, оставшиеся 50% после приёмки. Возможна поэтапная оплата для крупных проектов.</p></div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Предоставляете ли вы поддержку после запуска?</span>
+                        <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer"><p>Да, предоставляю бесплатную поддержку в течение 1 месяца после запуска. Далее — по договорённости. Всегда на связи для консультаций.</p></div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Можно ли внести изменения в уже готовый проект?</span>
+                        <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer"><p>Конечно. Любой проект можно доработать — добавить функционал, изменить дизайн, оптимизировать. Код всегда чистый и документированный.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="font-reader"><span class="font-reader-text">Contact</span></div>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <span class="section-tag">Контакты</span>
+                    <h2 class="section-title split-text">Давайте обсудим <span class="gradient-text">ваш проект</span></h2>
+                    <p class="contact-text">
+                        Расскажите о вашей задаче — я предложу решение, сроки и стоимость. Первая консультация бесплатна.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:your@email.com" class="contact-method">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>your@email.com</span>
+                        </a>
+                        <a href="https://t.me/yourusername" class="contact-method" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            <span>@yourusername</span>
+                        </a>
+                        <a href="https://github.com/yourusername" class="contact-method" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            <span>github.com/yourusername</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form animate-on-scroll" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Тип проекта</label>
+                        <select id="service" name="service">
+                            <option value="">Выберите услугу</option>
+                            <option value="website">Разработка сайта</option>
+                            <option value="mobile">Мобильное приложение</option>
+                            <option value="bot">Telegram-бот</option>
+                            <option value="webapp">Веб-приложение</option>
+                            <option value="design">Дизайн</option>
+                            <option value="backend">Backend / API</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Описание проекта</label>
+                        <textarea id="message" name="message" placeholder="Расскажите о вашем проекте..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full magnetic-btn">
+                        <span>Отправить сообщение</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="m22 2-11 11"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">&#60;/&#62;</span>
+                    <span class="logo-text">DevStudio</span>
+                </a>
+                <p>Создаю цифровые продукты, которые работают.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#services">Услуги</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#about">Обо мне</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 DevStudio. Все права защищены.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-cta-bar" id="mobileCtaBar">
+        <a href="#contact" class="btn btn-primary btn-full magnetic-btn">
+            <span>Обсудить проект</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+        <svg class="back-to-top-progress" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" id="bttProgress"/></svg>
+    </button>
+
+    <div class="toast" id="toast">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        <span>Сообщение отправлено! Я свяжусь с вами в ближайшее время.</span>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

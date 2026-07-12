@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fa709a"/><stop offset="100%" stop-color="#fee140"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg5)"/>
+  <!-- Laptop -->
+  <rect x="80" y="40" width="240" height="150" rx="8" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <rect x="88" y="48" width="224" height="130" rx="4" fill="#0f0f1a"/>
+  <!-- Browser chrome -->
+  <rect x="88" y="48" width="224" height="20" rx="4" fill="#16162a"/>
+  <circle cx="100" cy="58" r="3.5" fill="#ff5f57"/><circle cx="112" cy="58" r="3.5" fill="#febc2e"/><circle cx="124" cy="58" r="3.5" fill="#28c840"/>
+  <rect x="140" y="54" width="120" height="8" rx="3" fill="#222"/>
+  <!-- Nav -->
+  <rect x="88" y="68" width="224" height="16" fill="#12122a"/>
+  <rect x="96" y="72" width="40" height="6" rx="2" fill="#fa709a" opacity="0.6"/>
+  <rect x="150" y="72" width="24" height="6" rx="2" fill="#444"/>
+  <rect x="184" y="72" width="24" height="6" rx="2" fill="#444"/>
+  <rect x="218" y="72" width="24" height="6" rx="2" fill="#444"/>
+  <rect x="280" y="71" width="24" height="8" rx="3" fill="#fa709a" opacity="0.5"/>
+  <!-- Product grid -->
+  <rect x="96" y="90" width="48" height="52" rx="6" fill="#1e1e3a"/>
+  <rect x="96" y="90" width="48" height="30" rx="6" fill="#fa709a" opacity="0.15"/>
+  <rect x="100" y="124" width="28" height="4" rx="1" fill="#aaa"/>
+  <rect x="100" y="132" width="16" height="5" rx="2" fill="#fa709a" opacity="0.5"/>
+  
+  <rect x="152" y="90" width="48" height="52" rx="6" fill="#1e1e3a"/>
+  <rect x="152" y="90" width="48" height="30" rx="6" fill="#fee140" opacity="0.12"/>
+  <rect x="156" y="124" width="28" height="4" rx="1" fill="#aaa"/>
+  <rect x="156" y="132" width="16" height="5" rx="2" fill="#fee140" opacity="0.5"/>
+  
+  <rect x="208" y="90" width="48" height="52" rx="6" fill="#1e1e3a"/>
+  <rect x="208" y="90" width="48" height="30" rx="6" fill="#fa709a" opacity="0.15"/>
+  <rect x="212" y="124" width="28" height="4" rx="1" fill="#aaa"/>
+  <rect x="212" y="132" width="16" height="5" rx="2" fill="#fa709a" opacity="0.5"/>
+  
+  <rect x="264" y="90" width="40" height="52" rx="6" fill="#1e1e3a"/>
+  <rect x="264" y="90" width="40" height="30" rx="6" fill="#fee140" opacity="0.12"/>
+  <rect x="268" y="124" width="24" height="4" rx="1" fill="#aaa"/>
+  <rect x="268" y="132" width="14" height="5" rx="2" fill="#fee140" opacity="0.5"/>
+  <!-- Promo banner -->
+  <rect x="96" y="150" width="216" height="18" rx="6" fill="#fa709a" opacity="0.12"/>
+  <rect x="108" y="155" width="80" height="6" rx="2" fill="#fa709a" opacity="0.5"/>
+  <rect x="250" y="155" width="50" height="8" rx="3" fill="#fa709a" opacity="0.4"/>
+  <!-- Stand -->
+  <path d="M60 190 L340 190 L350 200 L50 200 Z" fill="#1a1a2e"/>
+  <rect x="160" y="188" width="80" height="4" rx="2" fill="#333"/>
+  <!-- Floating elements -->
+  <circle cx="50" cy="80" r="16" fill="#fff" opacity="0.06"/>
+  <circle cx="360" cy="160" r="22" fill="#fff" opacity="0.05"/>
+</svg>
