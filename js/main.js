@@ -214,7 +214,7 @@
   // Typewriter
   const typewriterEl = document.getElementById('typewriter');
   if (typewriterEl) {
-    const words = ['цифровые продукты', 'сайты и лендинги', 'мобильные приложения', 'Telegram-боты', 'веб-приложения'];
+    const words = ['цифровые продукты', 'сайты и лендинги', 'мобильные приложения', 'Telegram-боты', 'веб-приложения', 'AI-решения'];
     let wordIdx = 0, charIdx = 0, isDeleting = false, typeSpeed = 80;
     function typeLoop() {
       const current = words[wordIdx];

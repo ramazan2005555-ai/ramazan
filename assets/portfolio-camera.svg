@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="camGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bg)" rx="12"/>
+  
+  <!-- Grid lines -->
+  <g opacity="0.06" stroke="#7c3aed">
+    <line x1="0" y1="50" x2="600" y2="50"/>
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="150" x2="600" y2="150"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="250" x2="600" y2="250"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="350" x2="600" y2="350"/>
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="500" y1="0" x2="500" y2="400"/>
+  </g>
+  
+  <!-- Camera 1 -->
+  <g transform="translate(60, 40)">
+    <rect width="160" height="110" rx="8" fill="#1e1e30" stroke="#333" stroke-width="1"/>
+    <rect x="8" y="8" width="144" height="80" rx="4" fill="#0d1117"/>
+    <!-- Camera feed simulation - restaurant interior -->
+    <g opacity="0.8">
+      <!-- Tables -->
+      <rect x="20" y="50" width="30" height="30" rx="2" fill="#2a2a40" opacity="0.7"/>
+      <rect x="90" y="60" width="30" height="25" rx="2" fill="#2a2a40" opacity="0.7"/>
+      <!-- Person silhouette 1 -->
+      <circle cx="45" cy="42" r="6" fill="#7c3aed" opacity="0.6"/>
+      <rect x="40" y="48" width="10" height="16" rx="3" fill="#7c3aed" opacity="0.5"/>
+      <!-- Person silhouette 2 -->
+      <circle cx="110" cy="52" r="5" fill="#06b6d4" opacity="0.6"/>
+      <rect x="106" y="57" width="8" height="14" rx="3" fill="#06b6d4" opacity="0.5"/>
+      <!-- Detection boxes -->
+      <rect x="33" y="32" width="24" height="36" rx="2" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <rect x="102" y="44" width="16" height="30" rx="2" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <!-- Status text -->
+      <rect x="12" y="12" width="52" height="14" rx="3" fill="#22c55e" opacity="0.15"/>
+      <text x="16" y="22" font-family="monospace" font-size="8" fill="#22c55e">● LIVE</text>
+      <rect x="70" y="12" width="72" height="14" rx="3" fill="#7c3aed" opacity="0.15"/>
+      <text x="74" y="22" font-family="monospace" font-size="7" fill="#a78bfa">CAM-01 | Зал</text>
+    </g>
+    <text x="80" y="102" font-family="sans-serif" font-size="9" fill="#666" text-anchor="middle">Зал ресторана</text>
+  </g>
+  
+  <!-- Camera 2 -->
+  <g transform="translate(230, 40)">
+    <rect width="160" height="110" rx="8" fill="#1e1e30" stroke="#333" stroke-width="1"/>
+    <rect x="8" y="8" width="144" height="80" rx="4" fill="#0d1117"/>
+    <!-- Camera feed simulation - kitchen -->
+    <g opacity="0.8">
+      <!-- Kitchen counter -->
+      <rect x="10" y="55" width="120" height="8" rx="2" fill="#3a3a50" opacity="0.6"/>
+      <!-- Person cooking -->
+      <circle cx="60" cy="38" r="6" fill="#f59e0b" opacity="0.6"/>
+      <rect x="55" y="44" width="10" height="14" rx="3" fill="#f59e0b" opacity="0.5"/>
+      <!-- Person at station -->
+      <circle cx="105" cy="42" r="5" fill="#06b6d4" opacity="0.6"/>
+      <rect x="101" y="47" width="8" height="12" rx="3" fill="#06b6d4" opacity="0.5"/>
+      <!-- Detection boxes -->
+      <rect x="48" y="28" width="24" height="34" rx="2" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <rect x="97" y="34" width="16" height="28" rx="2" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <!-- Alert - no gloves -->
+      <rect x="92" y="24" width="26" height="10" rx="3" fill="#ef4444" opacity="0.2"/>
+      <text x="96" y="31" font-family="monospace" font-size="6" fill="#ef4444">⚠ glove</text>
+      <!-- Status -->
+      <rect x="12" y="12" width="52" height="14" rx="3" fill="#22c55e" opacity="0.15"/>
+      <text x="16" y="22" font-family="monospace" font-size="8" fill="#22c55e">● LIVE</text>
+      <rect x="70" y="12" width="72" height="14" rx="3" fill="#f59e0b" opacity="0.15"/>
+      <text x="74" y="22" font-family="monospace" font-size="7" fill="#fbbf24">CAM-02 | Кухня</text>
+    </g>
+    <text x="80" y="102" font-family="sans-serif" font-size="9" fill="#666" text-anchor="middle">Кухня</text>
+  </g>
+  
+  <!-- Camera 3 -->
+  <g transform="translate(400, 40)">
+    <rect width="160" height="110" rx="8" fill="#1e1e30" stroke="#333" stroke-width="1"/>
+    <rect x="8" y="8" width="144" height="80" rx="4" fill="#0d1117"/>
+    <!-- Camera feed - gas station -->
+    <g opacity="0.8">
+      <!-- Pump -->
+      <rect x="50" y="45" width="20" height="35" rx="3" fill="#3a3a50" opacity="0.6"/>
+      <rect x="90" y="45" width="20" height="35" rx="3" fill="#3a3a50" opacity="0.6"/>
+      <!-- Car -->
+      <rect x="35" y="25" width="50" height="18" rx="6" fill="#4a4a60" opacity="0.5"/>
+      <!-- Person -->
+      <circle cx="120" cy="50" r="5" fill="#7c3aed" opacity="0.6"/>
+      <rect x="116" y="55" width="8" height="14" rx="3" fill="#7c3aed" opacity="0.5"/>
+      <!-- Detection -->
+      <rect x="112" y="42" width="16" height="30" rx="2" fill="none" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <!-- Status -->
+      <rect x="12" y="12" width="52" height="14" rx="3" fill="#22c55e" opacity="0.15"/>
+      <text x="16" y="22" font-family="monospace" font-size="8" fill="#22c55e">● LIVE</text>
+      <rect x="70" y="12" width="72" height="14" rx="3" fill="#7c3aed" opacity="0.15"/>
+      <text x="74" y="22" font-family="monospace" font-size="7" fill="#a78bfa">CAM-03 | АЗС</text>
+    </g>
+    <text x="80" y="102" font-family="sans-serif" font-size="9" fill="#666" text-anchor="middle">Заправочная зона</text>
+  </g>
+  
+  <!-- Dashboard Panel -->
+  <g transform="translate(30, 175)">
+    <rect width="250" height="195" rx="10" fill="#12121f" stroke="#2a2a40" stroke-width="1"/>
+    <text x="16" y="26" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0">AI Dashboard</text>
+    
+    <!-- Stats -->
+    <g transform="translate(16, 40)">
+      <rect width="70" height="55" rx="6" fill="#1e1e30" stroke="#333" stroke-width="0.5"/>
+      <text x="35" y="22" font-family="monospace" font-size="16" fill="#22c55e" text-anchor="middle">3</text>
+      <text x="35" y="42" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Камеры</text>
+    </g>
+    <g transform="translate(92, 40)">
+      <rect width="70" height="55" rx="6" fill="#1e1e30" stroke="#333" stroke-width="0.5"/>
+      <text x="35" y="22" font-family="monospace" font-size="16" fill="#06b6d4" text-anchor="middle">7</text>
+      <text x="35" y="42" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Объектов</text>
+    </g>
+    <g transform="translate(168, 40)">
+      <rect width="70" height="55" rx="6" fill="#1e1e30" stroke="#333" stroke-width="0.5"/>
+      <text x="35" y="22" font-family="monospace" font-size="16" fill="#f59e0b" text-anchor="middle">1</text>
+      <text x="35" y="42" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Алерт</text>
+    </g>
+    
+    <!-- Alert list -->
+    <g transform="translate(16, 108)">
+      <text x="0" y="0" font-family="sans-serif" font-size="10" fill="#94a3b8">Последние события</text>
+      <rect y="10" width="220" height="22" rx="4" fill="#22c55e" opacity="0.08"/>
+      <circle cx="12" cy="21" r="3" fill="#22c55e"/>
+      <text x="22" y="25" font-family="monospace" font-size="8" fill="#22c55e">14:32 — Обед, Зал — Всё ОК</text>
+      <rect y="38" width="220" height="22" rx="4" fill="#ef4444" opacity="0.08"/>
+      <circle cx="12" cy="49" r="3" fill="#ef4444"/>
+      <text x="22" y="53" font-family="monospace" font-size="8" fill="#ef4444">14:28 — Кухня — Нет перчаток!</text>
+      <rect y="66" width="220" height="22" rx="4" fill="#22c55e" opacity="0.08"/>
+      <circle cx="12" cy="77" r="3" fill="#22c55e"/>
+      <text x="22" y="81" font-family="monospace" font-size="8" fill="#22c55e">14:15 — АЗС — Оплата пройдена</text>
+    </g>
+  </g>
+  
+  <!-- Chart Panel -->
+  <g transform="translate(300, 175)">
+    <rect width="270" height="195" rx="10" fill="#12121f" stroke="#2a2a40" stroke-width="1"/>
+    <text x="16" y="26" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0">Статистика за неделю</text>
+    
+    <!-- Bar chart -->
+    <g transform="translate(20, 45)">
+      <!-- Y axis labels -->
+      <text x="0" y="98" font-family="monospace" font-size="7" fill="#555">0</text>
+      <text x="0" y="78" font-family="monospace" font-size="7" fill="#555">25</text>
+      <text x="0" y="58" font-family="monospace" font-size="7" fill="#555">50</text>
+      <text x="0" y="38" font-family="monospace" font-size="7" fill="#555">75</text>
+      <text x="0" y="18" font-family="monospace" font-size="7" fill="#555">100</text>
+      
+      <!-- Grid -->
+      <line x1="25" y1="0" x2="245" y2="0" stroke="#222" stroke-width="0.5"/>
+      <line x1="25" y1="20" x2="245" y2="20" stroke="#222" stroke-width="0.5"/>
+      <line x1="25" y1="40" x2="245" y2="40" stroke="#222" stroke-width="0.5"/>
+      <line x1="25" y1="60" x2="245" y2="60" stroke="#222" stroke-width="0.5"/>
+      <line x1="25" y1="80" x2="245" y2="80" stroke="#222" stroke-width="0.5"/>
+      
+      <!-- Bars - events per day -->
+      <rect x="30" y="24" width="24" height="76" rx="3" fill="#7c3aed" opacity="0.7"/>
+      <rect x="62" y="40" width="24" height="60" rx="3" fill="#7c3aed" opacity="0.7"/>
+      <rect x="94" y="16" width="24" height="84" rx="3" fill="#ef4444" opacity="0.7"/>
+      <rect x="126" y="48" width="24" height="52" rx="3" fill="#7c3aed" opacity="0.7"/>
+      <rect x="158" y="32" width="24" height="68" rx="3" fill="#7c3aed" opacity="0.7"/>
+      <rect x="190" y="56" width="24" height="44" rx="3" fill="#22c55e" opacity="0.7"/>
+      <rect x="222" y="44" width="24" height="56" rx="3" fill="#7c3aed" opacity="0.7"/>
+      
+      <!-- Day labels -->
+      <text x="42" y="108" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Пн</text>
+      <text x="74" y="108" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Вт</text>
+      <text x="106" y="108" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Ср</text>
+      <text x="138" y="108" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Чт</text>
+      <text x="170" y="108" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Пт</text>
+      <text x="202" y="108" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Сб</text>
+      <text x="234" y="108" font-family="sans-serif" font-size="7" fill="#666" text-anchor="middle">Вс</text>
+    </g>
+    
+    <!-- Legend -->
+    <g transform="translate(20, 170)">
+      <circle cx="5" cy="0" r="3" fill="#7c3aed"/>
+      <text x="12" y="3" font-family="sans-serif" font-size="7" fill="#888">Нарушения</text>
+      <circle cx="85" cy="0" r="3" fill="#22c55e"/>
+      <text x="92" y="3" font-family="sans-serif" font-size="7" fill="#888">ОК</text>
+      <circle cx="135" cy="0" r="3" fill="#ef4444"/>
+      <text x="142" y="3" font-family="sans-serif" font-size="7" fill="#888">Критично</text>
+    </g>
+  </g>
+</svg>
