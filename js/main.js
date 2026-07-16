@@ -112,17 +112,6 @@
     });
   });
 
-  // Contact form
-  const form = document.getElementById('contactForm');
-  const toast = document.getElementById('toast');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('Form:', Object.fromEntries(new FormData(form).entries()));
-    form.reset();
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 4000);
-  });
-
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
